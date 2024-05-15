@@ -8,7 +8,6 @@ use llm_chain::{executor, parameters, prompt, step::Step};
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn Error>> {
-    dotenv().ok();
     let exec = executor!()?;
 
     let file = File::open("data.csv")?;
